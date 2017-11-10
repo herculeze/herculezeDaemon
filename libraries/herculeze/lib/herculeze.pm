@@ -34,7 +34,6 @@ sub HTMLdisp
 
 sub selectWhere                                                                  
 {                                                                                
-  my $dbh = shift;
   my $table = shift;                                                             
   my $col = shift;                                                               
   my $var = shift;                                                               
@@ -50,7 +49,6 @@ sub selectWhere
 
 sub selectAllWhere
 {
-    my $dbh = shift;
 	my $table = shift;
 	my $col = shift;
 	my $var = shift;
