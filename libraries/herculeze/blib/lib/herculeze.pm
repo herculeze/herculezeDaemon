@@ -5,6 +5,11 @@ require Exporter;
 @ISA = qw(Exporter);
 @EXPORT = qw(HTMLdisp selectWhere selectAllWhere);
 
+my $dbUser = "herculeze";                                                        
+my $dbPW = "";                                                                   
+my $database = "herculezeTest";                                                  
+my $dbh = DBI->connect("dbi:mysql:","$dbUser","$dbPW");                          
+$dbh->do("use $database;");                     
 sub HTMLdisp                                                                     
 {                                                                                
   my $title = shift;                                                             
