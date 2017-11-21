@@ -1,6 +1,0 @@
-Revision history for Perl extension herculeze.
-
-0.01  Thu Nov  9 20:48:38 2017
-	- original version; created by h2xs 1.23 with options
-		-AX -n herculeze
-
