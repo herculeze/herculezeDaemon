@@ -1,0 +1,3 @@
+CREATE USER 'herculeze'@'localhost' IDENTIFIED BY ''; 
+GRANT ALL PRIVILEGES ON herculezeTest.* TO 'herculeze'@'localhost'; 
+create database herculezeTest
