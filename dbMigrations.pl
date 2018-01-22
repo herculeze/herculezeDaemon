@@ -36,7 +36,7 @@ $dbh->do("create table Message(msgID varchar(32) primary key, toID varchar(32),
 $dbh->do("alter table Job add constraint fk_customerEmail foreign key
   (customerID) references User(userID);");
 
-$dnh->do("alter table Job add constraint fk_driverEmail foreign key (driverID)
+$dbh->do("alter table Job add constraint fk_driverEmail foreign key (driverID)
   references User(userID);");
 
 $dbh->do("alter table Photo add constraint fk_jobID foreign key (jobID)
