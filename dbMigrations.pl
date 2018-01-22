@@ -26,7 +26,8 @@ $dbh->do("create table Job(jobID varchar(32) primary key, title varchar(50),
   description varchar(500), currentBid integer, endTime integer, distance
   varchar(16));");
 
-$dbh->do("create table Photo(jobID varchar(32), fileName varchar(40));");
+$dbh->do("create table Photo(jobID varchar(32), fileName varchar(40), driverID
+  varchar(32));");
 
 $dbh->do("create table Message(msgID varchar(32) primary key, toID varchar(32),
   fromID varchar(32), unread integer(1),subject varchar(64), messageTxt
@@ -40,6 +41,9 @@ $dnh->do("alter table Job add constraint fk_driverEmail foreign key (driverID)
 
 $dbh->do("alter table Photo add constraint fk_jobID foreign key (jobID)
   references Job(jobID);");
+
+$dbh->do("alter table Photo add constraint fk_driverID foreign key (driverID)
+  references User(userID);");
 
 $dbh->do("alter table Message add constraint fk_toID foreign key (toID)
   references User(userID);");
