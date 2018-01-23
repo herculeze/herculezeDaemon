@@ -4,6 +4,7 @@ use strict;
 use warnings;
 
 use DBI;
+use Digest::SHA qw/sha256_hex/;
 
 my $dbUser = 'herculeze';
 my $dbPW='';
@@ -32,6 +33,13 @@ $dbh->do("create table Photo(jobID varchar(32), fileName varchar(40), driverID
 $dbh->do("create table Message(msgID varchar(32) primary key, toID varchar(32),
   fromID varchar(32), unread integer(1),subject varchar(64), messageTxt
   varchar(500), sent integer);");
+
+$dbh->do("create table AD(email varchar() primary key, password varchar,
+  token varchar(), created int, salt varchar);");
+
+my $password = sha256_hex("adminXXXXX");
+$dbh->do("insert into AD(email,password,salt) values('admin\@example.com',
+  $password, 'XXXXX'););
 
 $dbh->do("alter table Job add constraint fk_customerEmail foreign key
   (customerID) references User(userID);");
