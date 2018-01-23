@@ -34,8 +34,8 @@ $dbh->do("create table Message(msgID varchar(32) primary key, toID varchar(32),
   fromID varchar(32), unread integer(1),subject varchar(64), messageTxt
   varchar(500), sent integer);");
 
-$dbh->do("create table AD(email varchar() primary key, password varchar,
-  token varchar(), created int, salt varchar);");
+$dbh->do("create table AD(email varchar(320) primary key, password varchar(64),
+  token varchar(64), created int, salt varchar);");
 
 my $password = sha256_hex("adminXXXXX");
 $dbh->do("insert into AD(email,password,salt) values('admin\@example.com',
