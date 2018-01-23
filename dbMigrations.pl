@@ -35,11 +35,11 @@ $dbh->do("create table Message(msgID varchar(32) primary key, toID varchar(32),
   varchar(500), sent integer);");
 
 $dbh->do("create table AD(email varchar(320) primary key, password varchar(64),
-  token varchar(64), created integer, salt varchar);");
+  token varchar(64), created integer, salt int);");
 
-my $password = sha256_hex("adminXXXXX");
+my $password = sha256_hex("admin12345");
 $dbh->do("insert into AD(email,password,salt) values('admin\@example.com',
-  $password, 'XXXXX');");
+  $password, '12345');");
 
 $dbh->do("alter table Job add constraint fk_customerEmail foreign key
   (customerID) references User(userID);");
