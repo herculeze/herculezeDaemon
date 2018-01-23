@@ -39,7 +39,7 @@ $dbh->do("create table AD(email varchar() primary key, password varchar,
 
 my $password = sha256_hex("adminXXXXX");
 $dbh->do("insert into AD(email,password,salt) values('admin\@example.com',
-  $password, 'XXXXX'););
+  $password, 'XXXXX');");
 
 $dbh->do("alter table Job add constraint fk_customerEmail foreign key
   (customerID) references User(userID);");
