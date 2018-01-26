@@ -16,7 +16,7 @@ $dbh->do("use $database");
 $dbh->do("create table User(userID varchar(32) primary key, salt int, fName
   varchar(20), lName varchar(20), email varchar(320), verified integer(1)
   DEFAULT '0', password varchar(64), accType integer(1), authToken
-  varchar(32));");
+  varchar(32), accountStatus integer(1) DEFAULT '0');");
 
 $dbh->do("create table Job(jobID varchar(32) primary key, title varchar(50),
   weight integer, height integer, width integer, length integer, toAddr1
