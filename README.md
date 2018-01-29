@@ -16,7 +16,9 @@
 
 - 4 : Driver, account locked
 
-- 5 : Customer, account locked
+- 5 : Driver, application confirmed, no jobs completed, account locked
+
+- 6 : Customer, account locked
 
 ## Order Status Codes
 
