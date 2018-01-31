@@ -10,13 +10,13 @@
 
 - 1 : Driver, application pending
 
-- 2 : Driver, application confirmed, no jobs completed
+- 2 : Driver, application approved, no jobs completed
   
 - 3 : Driver, active
 
 - 4 : Driver, account locked
 
-- 5 : Driver, application confirmed, no jobs completed, account locked
+- 5 : Driver, application approved, no jobs completed, account locked
 
 - 6 : Customer, account locked
 
