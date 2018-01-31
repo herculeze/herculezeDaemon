@@ -24,9 +24,9 @@
 
 - 0 : Auction
 
-- 1 : Auction Completed
+- 1 : Auction Completed, Payment Pending
 
-- 2 : Payment pending
+- 2 : Payment Received
 
 - 3 : Driver en route to pickup 
 
