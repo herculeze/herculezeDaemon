@@ -27,6 +27,28 @@ $dbh->do("use $database;");
 my @jobIDs = selectAllUnconditional("Job","jobID");
 my $currentTime = time;
 
+for my $id (@jobIDs)
+{
+  my($endTime, $customerID, $driverID, $completed, $currentBid) = 
+    selectWhere("Job","endTime, customerID, driverID, completed, currentBid",
+      "jobID", "$id and completed ! 0");
+
+  my ($customerEmail, $customerFirstName, $customerLastName) = 
+    selectWhere( "User", "email, fName, lName", "userID", $id);
+
+  my ($driverEmail, $driverFirstName, $driverLastName) = 
+    selectWhere( "User", "email, fName, lName", "userID", $id);
+
+  if ($currentTime > $endTime)
+  {
+    $dbh->do(qq[ uodate Job set completed='1' where jobID='$id']);
+
+    # email customer
+    
+    # email driver
+  }
+} 
+
 sub selectAllUnconditional
 {
 	my $table = shift;
@@ -43,4 +65,19 @@ sub selectAllUnconditional
 		push @tmp, $row[0];
 	}
 	return @tmp;
+}
+
+sub selectWhere                                                                  
+{                                                                                
+  my $table = shift;                                                             
+  my $col = shift;                                                               
+  my $var = shift;                                                               
+  my $val = shift;                                                               
+                                                                                 
+  my $statement = "SELECT $col FROM $table where $var = \"$val\"";               
+  $statement = $dbh->prepare($statement);                                        
+  $statement->execute();                                                         
+                                                                                 
+  my @tmp = $statement->fetchrow_array();                                        
+  return @tmp;                                                                
 }
