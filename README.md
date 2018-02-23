@@ -6,7 +6,9 @@
 
 ## Account Status Codes
 
-- 0 : Customer
+- -1 : Customer, email not verified
+
+- 0 : Customer, email verified
 
 - 1 : Driver, application pending
 
