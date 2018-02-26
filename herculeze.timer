@@ -1,0 +1,7 @@
+[Unit]
+Description=Run Herculeze Daemon every 5 minutes.
+
+[Timer]
+OnCalendar=*:0/5 
+
+RandomizedDelaySec=15
