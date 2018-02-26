@@ -6,7 +6,7 @@ use warnings;
 use DBI;
 use Digest::SHA qw/sha256_hex/;
 
-my $dbUser = 'herculeze';
+my $dbUser = 'hrclz';
 my $dbPW='';
 my $database='herculezeTest';
 
