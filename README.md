@@ -6,7 +6,9 @@
 
 ## Account Status Codes
 
-- 0 : Customer
+- -1 : Customer, email not verified
+
+- 0 : Customer, email verified
 
 - 1 : Driver, application pending
 
@@ -18,7 +20,9 @@
 
 - 5 : Driver, application approved, no jobs completed, account locked
 
-- 6 : Customer, account locked
+- 6 : Customer, email not verified, account locked
+
+- 7 : Customer, email verified, account locked
 
 ## Order Status Codes
 
