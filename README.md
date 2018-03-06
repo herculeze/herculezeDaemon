@@ -43,3 +43,13 @@
 - 7 : Completed
 
 - 8 : Cancelled
+
+## URL Status Codes
+
+- EMAILERR : Email already in use
+
+- PASSERR : Password Incorrect
+
+- PASSMATCHERR : Passwords do not match (password + password\_ver)
+
+- FIELDERR : Required field left blank
