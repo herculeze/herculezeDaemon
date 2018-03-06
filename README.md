@@ -46,10 +46,10 @@
 
 ## URL Status Codes
 
-- EMAILERR : Email already in use
+- EMAILERROR : Email already in use
 
-- PASSERR : Password Incorrect
+- PASSERROR : Password Incorrect
 
-- PASSMATCHERR : Passwords do not match (password + password\_ver)
+- PASSMATCHERROR : Passwords do not match (password + password\_ver)
 
-- FIELDERR : Required field left blank
+- FIELDERROR : Required field left blank
