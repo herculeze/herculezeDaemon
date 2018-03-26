@@ -1,0 +1,25 @@
+unset bounce_delivered
+
+set mixmaster="mixmaster-filter"
+
+# System-wide CA file managed by the ca-certificates package
+set ssl_ca_certificates_file="/etc/ssl/certs/ca-certificates.crt"
+
+
+set smtp_pass="Herculeze2323$"
+
+set header_cache="~/.cache/mutt"
+unset imap_passive
+
+set realname='Herculeze'
+set from='no-reply@herculeze.com'
+set use_from=yes
+
+set ssl_starttls=yes
+set ssl_force_tls=yes 
+
+set smtp_url='smtp://no-reply@herculeze.com@smtp.office365.com:587'
+
+set copy=no
+
+source /usr/lib/mutt/source-muttrc.d| 
