@@ -5,9 +5,9 @@ use warnings;
 
 use DBI;
 
-my $dbUser = 'herculeze';
-my $dbPW='';
-my $database='herculezeTest';
+my $dbUser = $ENV{"DBUSER"};
+my $dbPW = $ENV{"DBPASS"};
+my $database = $ENV{"DATABASE"};
 
 my $dbh = DBI->connect("dbi:mysql:","$dbUser","$dbPW");
 $dbh->do("use $database"); 
