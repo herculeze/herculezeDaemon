@@ -6,9 +6,9 @@ use warnings;
 use DBI;
 use Digest::SHA qw/sha256_hex/;
 
-my $dbUser = 'hrclz';
-my $dbPW='';
-my $database='herculezeTest';
+my $dbUser = $ENV{"DBUSER"};
+my $dbPW = $ENV{"DBPASS"};
+my $database = $ENV{"DATABASE"};
 
 my $dbh = DBI->connect("dbi:mysql:","$dbUser","$dbPW");
 $dbh->do("use $database"); 
