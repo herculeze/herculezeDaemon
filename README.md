@@ -1,3 +1,20 @@
+## Dependencies
+
+- pandoc
+
+- texlive
+
+- LWP
+
+- DBI
+
+- Crypt::Digest::SHA256
+
+- Crypt::Digest::MD5
+
+- Business::PayPal::EWP
+
+
 ## Account Types
 
 - 0 : Customer
