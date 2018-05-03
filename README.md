@@ -70,3 +70,7 @@
 - PASSMATCHERROR : Passwords do not match (password + password\_ver)
 
 - FIELDERROR : Required field left blank
+
+## Entity Relationship Diagram
+
+![](imgs/2018-05-02_ERD.png)
