@@ -37,36 +37,36 @@ $dbh->do("create table Message(msgID varchar(32) primary key, toID varchar(32),
 $dbh->do("create table AD(email varchar(320), password varchar(64), token
   varchar(64), salt int);");
 
-$dbh->do("create table Bid(bidID varchar(32), jobID varchar(32), driverID
-  varchar(32), bidAmnt int);");
+$dbh->do("create table Bid(bidID varchar(32) primary key, jobID varchar(32),
+  driverID varchar(32), bidAmnt int);");
 
 my $password = sha256_hex("admin12345");
 $dbh->do("insert into AD(email,password,salt) values('admin\@example.com',
   '$password', '12345');");
 
-$dbh->do("alter table Job add constraint fk_customerID foreign key
+$dbh->do("alter table Job add constraint fk_customerID_Job foreign key
   (customerID) references User(userID);");
 
-$dbh->do("alter table Job add constraint fk_driverID foreign key (driverID)
+$dbh->do("alter table Job add constraint fk_driverID_Job foreign key (driverID)
   references User(userID);");
 
-$dbh->do("alter table Job add constraint fk_winningBidID foreign key
+$dbh->do("alter table Job add constraint fk_winningBidID_Job foreign key
   (winningBidID) references Bid(bidID);");
 
-$dbh->do("alter table Photo add constraint fk_jobID foreign key (jobID)
+$dbh->do("alter table Photo add constraint fk_jobID_Photo foreign key (jobID)
   references Job(jobID);");
 
-$dbh->do("alter table Photo add constraint fk_driverID foreign key (driverID)
-  references User(userID);");
-
-$dbh->do("alter table Message add constraint fk_toID foreign key (toID)
-  references User(userID);");
-
-$dbh->do("alter table Message add constraint fk_fromID foreign key (fromID)
-  references User(userID);");
-
-$dbh->do("alter table Bid add constraint fk_driverID foreign key
+$dbh->do("alter table Photo add constraint fk_driverID_Photo foreign key
   (driverID) references User(userID);");
 
-$dbh->do("alter table Bid add constraint fk_jobID foreign key
+$dbh->do("alter table Message add constraint fk_toID_Message foreign key (toID)
+  references User(userID);");
+
+$dbh->do("alter table Message add constraint fk_fromID_Message foreign key
+  (fromID) references User(userID);");
+
+$dbh->do("alter table Bid add constraint fk_driverID_Bid foreign key
+  (driverID) references User(userID);");
+
+$dbh->do("alter table Bid add constraint fk_jobID_Bid foreign key
   (jobID) references Job(jobID);");
