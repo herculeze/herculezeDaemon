@@ -17,4 +17,5 @@ $dbh->do("drop table Bid;");
 $dbh->do("drop table Message;");
 $dbh->do("drop table Photo;");
 $dbh->do("drop table Job;");
+$dbh->do("drop table Review;");
 $dbh->do("drop table User;");
