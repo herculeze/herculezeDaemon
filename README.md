@@ -41,6 +41,12 @@
 
 - 7 : Customer, email verified, account locked
 
+## Auction Type
+
+- 0 : Auction
+
+- 1 : "Buy it now"
+
 ## Order Status Codes
 
 - 0 : Auction

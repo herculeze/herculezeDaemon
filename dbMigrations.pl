@@ -25,7 +25,7 @@ $dbh->do("create table Job(jobID varchar(32) primary key, title varchar(50),
   integer(5), fromCity varchar(30), fromState varchar(2), customerID
   varchar(32), driverID varchar(32), completed integer(1) DEFAULT '0',
   description varchar(500), winningBidID varchar(32), endTime integer, distance
-  varchar(16), timeCreated integer);");
+  varchar(16), timeCreated integer, auctionType integer(1) );");
 
 $dbh->do("create table Photo(jobID varchar(32), fileName varchar(40), driverID
   varchar(32));");
