@@ -55,13 +55,9 @@
 
 - 2 : Payment Received
 
-- 3 : Driver en route to pickup 
+- 3 : Auction Completed, no bids
 
-- 4 : Driver arrived at pickup
-
-- 5 : Delivery in progress
-
-- 6 : Driver arrived at destination
+- 4 : Auction Completed, winning bid not chosen yet
 
 - 7 : Completed
 
