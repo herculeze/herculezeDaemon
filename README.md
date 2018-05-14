@@ -77,8 +77,5 @@
 
 ## Entity Relationship Diagram
 
-![](imgs/2018-05-02_ERD.png)
+![](imgs/2018-05-14_ERD.png)
 
-Note: The ERD was generated on Windows. MariaDB on Windows apparently enforces
-all-lowercase for table names. As such, the capitalization of table names in the
-diagram are incorrect.
