@@ -27,8 +27,8 @@ $dbh->do("create table Job(jobID varchar(32) primary key, title varchar(50),
   description varchar(500), endTime integer, distance varchar(16), timeCreated
   integer, auctionType integer(1), offer integer);");
 
-$dbh->do("create table Photo(photoID varchar(32) primary key, jobID varchar(32),
-  fileName varchar(40), driverID varchar(32));");
+$dbh->do("create table Photo(photoID varchar(32) primary key, fileName
+  varchar(40));");
 
 $dbh->do("create table Message(msgID varchar(32) primary key, toID varchar(32),
   fromID varchar(32), unread integer(1),subject varchar(64), messageTxt
@@ -45,6 +45,7 @@ $dbh->do("create table Review(reviewID varchar(32) primary key, reviewerID
   date int);");
 
 $dbh->do("create table TruckPhoto(driverID varchar(32), photoID varchar(32))");
+$dbh->do("create table JobPhoto(jobID varchar(32), photoID varchar(32))");
 
 my $password = sha256_hex("admin12345");
 $dbh->do("insert into AD(email,password,salt) values('admin\@example.com',
@@ -75,6 +76,11 @@ $dbh->do("alter table TruckPhoto add constraint fk_photoID_TruckPhoto foreign
 $dbh->do("alter table TruckPhoto add constraint fk_driverID_TruckPhoto foreign
   key (driverID) references User(userID);");
 
+$dbh->do("alter table JobPhoto add constraint fk_photoID_TruckPhoto foreign
+  key (photoID) references Photo(photoID);");
+
+$dbh->do("alter table JobPhoto add constraint fk_jobID_TruckPhoto foreign
+  key (jobID) references Job(jobID);");
 
 $dbh->do("alter table Message add constraint fk_toID_Message foreign key (toID)
   references User(userID);");
