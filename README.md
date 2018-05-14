@@ -51,7 +51,7 @@
 
 - 0 : Auction
 
-- 1 : Auction Completed, Payment Pending
+- 1 : Auction Completed, Payment Pending (Deprecated)
 
 - 2 : Payment Received
 
