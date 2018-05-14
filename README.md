@@ -17,6 +17,8 @@
 
 ## Account Types
 
+### Account Types is deprecated and will be removed in a future release
+
 - 0 : Customer
 
 - 1 : Driver
