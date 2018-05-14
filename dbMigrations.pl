@@ -66,20 +66,16 @@ $dbh->do("alter table Job add constraint fk_customerID_Job foreign key
 $dbh->do("alter table Job add constraint fk_driverID_Job foreign key (driverID)
   references User(userID);");
 
-$dbh->do("alter table Photo add constraint fk_jobID_Photo foreign key (jobID)
-  references Job(jobID);");
-
-
 $dbh->do("alter table TruckPhoto add constraint fk_photoID_TruckPhoto foreign
   key (photoID) references Photo(photoID);");
 
 $dbh->do("alter table TruckPhoto add constraint fk_driverID_TruckPhoto foreign
   key (driverID) references User(userID);");
 
-$dbh->do("alter table JobPhoto add constraint fk_photoID_TruckPhoto foreign
+$dbh->do("alter table JobPhoto add constraint fk_photoID_JobPhoto foreign
   key (photoID) references Photo(photoID);");
 
-$dbh->do("alter table JobPhoto add constraint fk_jobID_TruckPhoto foreign
+$dbh->do("alter table JobPhoto add constraint fk_jobID_JobPhoto foreign
   key (jobID) references Job(jobID);");
 
 $dbh->do("alter table Message add constraint fk_toID_Message foreign key (toID)
