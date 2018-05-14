@@ -44,6 +44,8 @@ $dbh->do("create table Review(reviewID varchar(32) primary key, reviewerID
   varchar(32), revieweeID varchar(32), starRating int, reviewText varchar(1024), 
   date int);");
 
+$dbh->do("create table TruckPhoto(driverID varchar(32), photoID varchar(32))");
+
 my $password = sha256_hex("admin12345");
 $dbh->do("insert into AD(email,password,salt) values('admin\@example.com',
   '$password', '12345');");
@@ -66,8 +68,13 @@ $dbh->do("alter table Job add constraint fk_driverID_Job foreign key (driverID)
 $dbh->do("alter table Photo add constraint fk_jobID_Photo foreign key (jobID)
   references Job(jobID);");
 
-$dbh->do("alter table Photo add constraint fk_driverID_Photo foreign key
-  (driverID) references User(userID);");
+
+$dbh->do("alter table TruckPhoto add constraint fk_jobID_TruckPhoto foreign key
+  (jobID) references Job(jobID);");
+
+$dbh->do("alter table TruckPhoto add constraint fk_driverID_TruckPhoto foreign
+  key (driverID) references User(userID);");
+
 
 $dbh->do("alter table Message add constraint fk_toID_Message foreign key (toID)
   references User(userID);");

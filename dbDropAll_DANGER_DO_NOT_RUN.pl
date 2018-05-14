@@ -12,6 +12,7 @@ my $database = $ENV{"DATABASE"};
 my $dbh = DBI->connect("dbi:mysql:","$dbUser","$dbPW");
 $dbh->do("use $database"); 
 
+$dbh->do("drop table TruckPhoto;");
 $dbh->do("drop table AD;");
 $dbh->do("drop table Bid;");
 $dbh->do("drop table Message;");
