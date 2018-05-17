@@ -12,8 +12,13 @@
 
 - Crypt::Digest::MD5
 
-- Business::PayPal::EWP
+- Crypt::SSLeay^*
 
+- Business::PayPal::EWP^**
+
+* requires libssl-dev
+
+** CPAN doesn't like installing this one, try doing it by hand
 
 ## Account Types
 
