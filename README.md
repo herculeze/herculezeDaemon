@@ -12,11 +12,11 @@
 
 - Crypt::Digest::MD5
 
-- Crypt::SSLeay^*
+- Crypt::SSLeay<sup>*</sup>
 
-- Business::PayPal::EWP^**
+- Business::PayPal::EWP<sup>**</sup>
 
-* requires libssl-dev
+\* requires libssl-dev
 
 ** CPAN doesn't like installing this one, try doing it by hand
 
