@@ -23,7 +23,7 @@ $dbh->do("create table Job(jobID varchar(32) primary key, title varchar(50),
   varchar(100), toAddr2 varchar(100), toZip integer(5), toCity varchar(30),
   toState varchar(2), fromAddr1 varchar(100), fromAddr2 varchar(100), fromZip
   integer(5), fromCity varchar(30), fromState varchar(2), customerID
-  varchar(32), driverID varchar(32), completed integer(1) DEFAULT '0',
+  varchar(32), completed integer(1) DEFAULT '0',
   description varchar(500), endTime integer, distance varchar(16), timeCreated
   integer, auctionType integer(1), offer integer);");
 
@@ -62,9 +62,6 @@ $dbh->do("alter table User add constraint fk_profilePic foreign key
 
 $dbh->do("alter table Job add constraint fk_customerID_Job foreign key
   (customerID) references User(userID);");
-
-$dbh->do("alter table Job add constraint fk_driverID_Job foreign key (driverID)
-  references User(userID);");
 
 $dbh->do("alter table TruckPhoto add constraint fk_photoID_TruckPhoto foreign
   key (photoID) references Photo(photoID);");
