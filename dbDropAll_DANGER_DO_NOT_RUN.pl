@@ -16,6 +16,7 @@ $dbh->do("drop table Bid;");
 $dbh->do("drop table AD;");
 $dbh->do("drop table TruckPhoto;");
 $dbh->do("drop table JobPhoto;");
+$dbh->do("drop table UserPhoto;");
 $dbh->do("drop table Message;");
 $dbh->do("drop table Review;");
 $dbh->do("drop table Job;");
