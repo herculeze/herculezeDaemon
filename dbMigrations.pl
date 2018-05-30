@@ -58,9 +58,6 @@ $dbh->do("alter table Review add constraint fk_customerID_Rev foreign key
 $dbh->do("alter table Review add constraint fk_driverID_Rev foreign key
   (revieweeID) references User(userID);");
 
-$dbh->do("alter table User add constraint fk_profilePic foreign key
-  (profilePicID) references Photo(photoID);");
-
 $dbh->do("alter table Job add constraint fk_customerID_Job foreign key
   (customerID) references User(userID);");
 
