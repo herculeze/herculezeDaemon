@@ -46,7 +46,7 @@ $dbh->do("create table Review(reviewID varchar(32) primary key, reviewerID
 
 $dbh->do("create table TruckPhoto(driverID varchar(32), photoID varchar(32))");
 $dbh->do("create table JobPhoto(jobID varchar(32), photoID varchar(32))");
-$dbh->do("create table UserPhoto(userID varchar(32), photoID varchar(32), iProfilePic integer(1))");
+$dbh->do("create table UserPhoto(userID varchar(32), photoID varchar(32), isProfilePic integer(1))");
 
 my $password = sha256_hex("admin12345");
 $dbh->do("insert into AD(email,password,salt) values('admin\@example.com',
