@@ -28,7 +28,7 @@ $dbh->do("create table Job(jobID varchar(32) primary key, title varchar(50),
   integer, offer integer);");
 
 $dbh->do("create table Photo(photoID varchar(32) primary key, fileName
-  varchar(40));");
+  varchar(40), owner varchar(32));");
 
 $dbh->do("create table Message(msgID varchar(32) primary key, toID varchar(32),
   fromID varchar(32), unread integer(1),subject varchar(64), messageTxt
