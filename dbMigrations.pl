@@ -79,6 +79,9 @@ $dbh->do("alter table UserPhoto add constraint fk_userID_UserPhoto foreign
 $dbh->do("alter table UserPhoto add constraint fk_photoID_UserPhoto foreign
   key (photoID) references Photo(photoID);");
 
+$dbh->do("alter table Photo add constraint fk_owner foreign key (owner)
+  references User(userID);");
+
 $dbh->do("alter table Message add constraint fk_toID_Message foreign key (toID)
   references User(userID);");
 
