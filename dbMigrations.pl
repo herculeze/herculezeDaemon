@@ -46,8 +46,8 @@ $dbh->do("create table Review(reviewID varchar(32) primary key, reviewerID
   varchar(32), revieweeID varchar(32), starRating int, reviewText varchar(1024), 
   date int);");
 
-$dbh->do("create table TruckPhoto(driverID varchar(32), photoID varchar(32))");
-$dbh->do("create table JobPhoto(jobID varchar(32), photoID varchar(32), isProfilePic integer(1))");
+$dbh->do("create table TruckPhoto(driverID varchar(32), photoID varchar(32), isProfilePic integer(1))");
+$dbh->do("create table JobPhoto(jobID varchar(32), photoID varchar(32))");
 $dbh->do("create table UserPhoto(userID varchar(32), photoID varchar(32), isProfilePic integer(1))");
 
 my $password = sha256_hex("admin12345");
