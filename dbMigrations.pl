@@ -25,9 +25,9 @@ $dbh->do("create table Job(jobID varchar(32) primary key, title varchar(50),
   varchar(100), toAddr2 varchar(100), toZip integer(5), toCity varchar(30),
   toState varchar(2), fromAddr1 varchar(100), fromAddr2 varchar(100), fromZip
   integer(5), fromCity varchar(30), fromState varchar(2), customerID
-  varchar(32), completed integer(1) DEFAULT '0',
-  description varchar(500), endTime integer, distance varchar(16), timeCreated
-  integer, offer integer);");
+  varchar(32), completed integer(1) DEFAULT '0', description varchar(500),
+  endTime integer, distance varchar(16), timeCreated integer, offer integer,
+  distValue integer);");
 
 $dbh->do("create table Photo(photoID varchar(32) primary key, fileName
   varchar(40), owner varchar(32));");
