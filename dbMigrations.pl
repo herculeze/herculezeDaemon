@@ -44,7 +44,7 @@ $dbh->do("create table Bid(bidID varchar(32) primary key, jobID varchar(32),
 
 $dbh->do("create table Review(reviewID varchar(32) primary key, reviewerID
   varchar(32), revieweeID varchar(32), starRating int, reviewText varchar(1024), 
-  date int);");
+  date int, jobID varchar(32));");
 
 $dbh->do("create table TruckPhoto(driverID varchar(32), photoID varchar(32), isProfilePic integer(1))");
 $dbh->do("create table JobPhoto(jobID varchar(32), photoID varchar(32))");
@@ -59,6 +59,9 @@ $dbh->do("alter table Review add constraint fk_customerID_Rev foreign key
 
 $dbh->do("alter table Review add constraint fk_driverID_Rev foreign key
   (revieweeID) references User(userID);");
+
+$dbh->do("alter table Review add constraint fk_jobID_Rev foreign key
+  (jobID) references Job(jobID);");
 
 $dbh->do("alter table Job add constraint fk_customerID_Job foreign key
   (customerID) references User(userID);");
