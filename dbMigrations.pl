@@ -50,9 +50,10 @@ $dbh->do("create table TruckPhoto(driverID varchar(32), photoID varchar(32), isP
 $dbh->do("create table JobPhoto(jobID varchar(32), photoID varchar(32))");
 $dbh->do("create table UserPhoto(userID varchar(32), photoID varchar(32), isProfilePic integer(1))");
 
-my $password = sha256_hex("admin12345");
-$dbh->do("insert into AD(email,password,salt) values('admin\@example.com',
-  '$password', '12345');");
+my $time = time;
+my $password = sha256_hex('Herculeze2323$'.$time);
+$dbh->do("insert into AD(email,password,salt) values('customerservice\@herculeze.com',
+  '$password', $time);");
 
 $dbh->do("alter table Review add constraint fk_customerID_Rev foreign key
   (reviewerID) references User(userID);");
