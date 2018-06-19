@@ -1,5 +1,0 @@
-[Unit]
-Description=Herculeze Delivery Marketplace
-
-[Service]
-ExecStart=/usr/bin/perl /home/hrclz/herculezeDaemon/herculezeDaemon.pl
