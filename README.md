@@ -6,6 +6,8 @@
 
 - LWP::Simple
 
+- LWP::UserAgent
+
 - DBI
 
 - Crypt::Digest::SHA256
