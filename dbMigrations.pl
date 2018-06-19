@@ -18,7 +18,8 @@ $dbh->do("create table User(userID varchar(32) primary key, salt int, fName
   accType integer(1), authToken varchar(32), accountStatus integer(1) DEFAULT
   '-1', verificationCode varchar(32), bio varchar(1024), timesReported integer,
   phone varchar(15), addr1 varchar(100), addr2 varchar(100), city 
-  varchar(30), state varchar(2), zip integer(5),paypal varchar(100));");
+  varchar(30), state varchar(2), zip integer(5),paypal varchar(100) lat 
+  varchar(10), long varchar(10));");
 
 $dbh->do("create table Job(jobID varchar(32) primary key, title varchar(50),
   weight integer, height integer, width integer, length integer, toAddr1
@@ -27,7 +28,7 @@ $dbh->do("create table Job(jobID varchar(32) primary key, title varchar(50),
   integer(5), fromCity varchar(30), fromState varchar(2), customerID
   varchar(32), completed integer(1) DEFAULT '0', description varchar(500),
   endTime integer, distance varchar(16), timeCreated integer, offer integer,
-  distValue integer);");
+  distValue integer, lat varchar(10), long varchar(10));");
 
 $dbh->do("create table Photo(photoID varchar(32) primary key, fileName
   varchar(40), owner varchar(32));");

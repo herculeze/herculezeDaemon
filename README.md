@@ -4,13 +4,17 @@
 
 - texlive
 
-- LWP
+- LWP::Simple
 
 - DBI
 
 - Crypt::Digest::SHA256
 
 - Crypt::Digest::MD5
+
+- GIS::Distance
+
+- GIS::Distance::Fast
 
 - Crypt::SSLeay<sup>*</sup>
 
