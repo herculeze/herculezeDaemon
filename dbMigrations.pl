@@ -51,7 +51,7 @@ $dbh->do("create table TruckPhoto(driverID varchar(32), photoID varchar(32), isP
 $dbh->do("create table JobPhoto(jobID varchar(32), photoID varchar(32))");
 $dbh->do("create table UserPhoto(userID varchar(32), photoID varchar(32), isProfilePic integer(1))");
 
-$dbh->do("create table PromotionalEmails(date integer, type integer(1), lat
+$dbh->do("create table PromotionalEmail(date integer, type integer(1), lat
   varchar(15), lng varchar(15));");
 
 my $time = time;
