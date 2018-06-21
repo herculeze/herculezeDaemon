@@ -21,7 +21,7 @@ $dbh->do("create table User(userID varchar(32) primary key, salt int, fName
   varchar(30), state varchar(2), zip integer(5),paypal varchar(100), lat 
   varchar(15), lng varchar(15), lastPromotionalEmail int,
   promotionalEmailFreq int DEFAULT '3', promotionalEmailRadius int DEFAULT
-  '20', filterRadius int);");
+  '20', filterRadius int DEFAULT '20');");
 
 $dbh->do("create table Job(jobID varchar(32) primary key, title varchar(50),
   weight integer, height integer, width integer, length integer, toAddr1
