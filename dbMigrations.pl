@@ -19,7 +19,9 @@ $dbh->do("create table User(userID varchar(32) primary key, salt int, fName
   '-1', verificationCode varchar(32), bio varchar(1024), timesReported integer,
   phone varchar(15), addr1 varchar(100), addr2 varchar(100), city 
   varchar(30), state varchar(2), zip integer(5),paypal varchar(100) lat 
-  varchar(15), lng varchar(15));");
+  varchar(15), lng varchar(15), lastPromotionalEmail integer,
+  promotionalEmailFreq integer, promotionalEmailRadius integer, filterRadius
+  integer);");
 
 $dbh->do("create table Job(jobID varchar(32) primary key, title varchar(50),
   weight integer, height integer, width integer, length integer, toAddr1
