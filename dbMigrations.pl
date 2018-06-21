@@ -18,10 +18,10 @@ $dbh->do("create table User(userID varchar(32) primary key, salt int, fName
   accType integer(1), authToken varchar(32), accountStatus integer(1) DEFAULT
   '-1', verificationCode varchar(32), bio varchar(1024), timesReported integer,
   phone varchar(15), addr1 varchar(100), addr2 varchar(100), city 
-  varchar(30), state varchar(2), zip integer(5),paypal varchar(100) lat 
-  varchar(15), lng varchar(15), lastPromotionalEmail integer,
-  promotionalEmailFreq integer, promotionalEmailRadius integer, filterRadius
-  integer);");
+  varchar(30), state varchar(2), zip integer(5),paypal varchar(100), lat 
+  varchar(15), lng varchar(15), lastPromotionalEmail int,
+  promotionalEmailFreq int, promotionalEmailRadius int, filterRadius
+  int);");
 
 $dbh->do("create table Job(jobID varchar(32) primary key, title varchar(50),
   weight integer, height integer, width integer, length integer, toAddr1
@@ -52,9 +52,6 @@ $dbh->do("create table Review(reviewID varchar(32) primary key, reviewerID
 $dbh->do("create table TruckPhoto(driverID varchar(32), photoID varchar(32), isProfilePic integer(1))");
 $dbh->do("create table JobPhoto(jobID varchar(32), photoID varchar(32))");
 $dbh->do("create table UserPhoto(userID varchar(32), photoID varchar(32), isProfilePic integer(1))");
-
-$dbh->do("create table PromotionalEmail(date integer, type integer(1), lat
-  varchar(15), lng varchar(15));");
 
 my $time = time;
 my $password = sha256_hex('Herculeze2323$'.$time);
