@@ -1,8 +1,8 @@
 ## Dependencies
 
-- pandoc
+- ~~pandoc~~
 
-- texlive
+- ~~texlive~~
 
 - LWP::Simple
 
@@ -18,9 +18,9 @@
 
 - GIS::Distance::Fast
 
-- Crypt::SSLeay<sup>*</sup>
+- ~~Crypt::SSLeay<sup>*</sup>~~
 
-- Business::PayPal::EWP<sup>**</sup>
+- ~~Business::PayPal::EWP<sup>**</sup>~~
 
 \* requires libssl-dev
 
