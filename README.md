@@ -18,6 +18,10 @@
 
 - GIS::Distance::Fast
 
+- JSON
+
+- URI::Escape
+
 - ~~Crypt::SSLeay<sup>*</sup>~~
 
 - ~~Business::PayPal::EWP<sup>**</sup>~~
