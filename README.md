@@ -20,6 +20,8 @@
 
 - JSON
 
+- WWW::Mechanize
+
 - URI::Escape
 
 - ~~Crypt::SSLeay<sup>*</sup>~~
