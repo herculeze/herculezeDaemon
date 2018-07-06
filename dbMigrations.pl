@@ -22,7 +22,7 @@ $dbh->do("create table User(userID varchar(32) primary key, salt int, fName
   varchar(15), lng varchar(15), lastPromotionalEmail int,
   promotionalEmailFreq int DEFAULT '3', promotionalEmailRadius int DEFAULT
   '20', filterRadius int DEFAULT '20', referer varchar(320), jobComplete
-  integer(1), rewardReceived integer(1));");
+  integer(1), rewardReceived integer(1), apiAuth varchar(32));");
 
 $dbh->do("create table Job(jobID varchar(32) primary key, title varchar(50),
   weight integer, height integer, width integer, length integer, toAddr1
