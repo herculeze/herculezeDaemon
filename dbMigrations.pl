@@ -31,7 +31,7 @@ $dbh->do("create table Job(jobID varchar(32) primary key, title varchar(50),
   integer(5), fromCity varchar(30), fromState varchar(2), customerID
   varchar(32), completed integer(1) DEFAULT '0', description varchar(500),
   endTime integer, distance varchar(16), timeCreated integer, offer integer,
-  distValue integer, lat varchar(15), lng varchar(15), needThisBy int);");
+  distValue integer, lat varchar(15), lng varchar(15), needThisBy int, people int);");
 
 $dbh->do("create table Photo(photoID varchar(32) primary key, fileName
   varchar(40), owner varchar(32));");
