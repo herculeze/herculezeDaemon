@@ -60,7 +60,7 @@
 
 - 7 : Customer, email verified, account locked
 
-## Auction Type
+## Auction Type (Deprecated)
 
 - 0 : Auction
 
