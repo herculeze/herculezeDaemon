@@ -4,9 +4,15 @@
 
 - ~~texlive~~
 
+- Net::SSLeay
+
+- IO::Socket::SSL
+
 - LWP::Simple
 
 - LWP::UserAgent
+
+- LWP::Protocol::https
 
 - DBI
 

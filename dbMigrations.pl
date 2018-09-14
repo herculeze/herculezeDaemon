@@ -20,8 +20,8 @@ $dbh->do("create table User(userID varchar(32) primary key, salt int, fName
   phone varchar(15), addr1 varchar(100), addr2 varchar(100), city 
   varchar(30), state varchar(2), zip integer(5),paypal varchar(100), lat 
   varchar(15), lng varchar(15), lastPromotionalEmail int,
-  promotionalEmailFreq int DEFAULT '3', promotionalEmailRadius int DEFAULT
-  '20', filterRadius int DEFAULT '20', referer varchar(320), jobComplete
+  promotionalEmailFreq int DEFAULT '1', promotionalEmailRadius int DEFAULT
+  '20', filterRadius int DEFAULT '25', referer varchar(320), jobComplete
   integer(1), rewardReceived integer(1), apiAuth varchar(32));");
 
 $dbh->do("create table Job(jobID varchar(32) primary key, title varchar(50),
