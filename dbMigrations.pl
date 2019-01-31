@@ -22,7 +22,8 @@ $dbh->do("create table User(userID varchar(32) primary key, salt int, fName
   varchar(15), lng varchar(15), lastPromotionalEmail int,
   promotionalEmailFreq int DEFAULT '1', promotionalEmailRadius int DEFAULT
   '20', filterRadius int DEFAULT '25', referer varchar(320), jobComplete
-  integer(1), rewardReceived integer(1), apiAuth varchar(32));");
+  integer(1), rewardReceived integer(1), apiAuth varchar(32), CVEDcert varchar(50),
+  insuranceCompany varchar(50), exp int(2), bday int(11), equipment varchar(512);");
 
 $dbh->do("create table Job(jobID varchar(32) primary key, title varchar(50),
   weight integer, height integer, width integer, length integer, toAddr1
@@ -31,7 +32,8 @@ $dbh->do("create table Job(jobID varchar(32) primary key, title varchar(50),
   integer(5), fromCity varchar(30), fromState varchar(2), customerID
   varchar(32), completed integer(1) DEFAULT '0', description varchar(500),
   endTime integer, distance varchar(16), timeCreated integer, offer integer,
-  distValue integer, lat varchar(15), lng varchar(15), needThisBy int, startDate int, people integer);");
+  distValue integer, lat varchar(15), lng varchar(15), needThisBy int, people integer(11),
+  insuranceVal int(5));");
 
 $dbh->do("create table Photo(photoID varchar(32) primary key, fileName
   varchar(40), owner varchar(32));");
